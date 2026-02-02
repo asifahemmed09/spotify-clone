@@ -28,7 +28,6 @@
     },
 
     /* Additional */
-    "types": ["vite/client", "node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true

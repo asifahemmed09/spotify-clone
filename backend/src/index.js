@@ -22,14 +22,17 @@ dotenv.config();
 
 const __dirname = path.resolve();
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 const httpServer = createServer(app);
 initializeSocket(httpServer);
 
+// FIXED: Updated CORS configuration for production
 app.use(
 	cors({
-		origin: "http://localhost:3000",
+		origin: process.env.NODE_ENV === "production" 
+			? process.env.FRONTEND_URL || true // Allow your Render domain or any origin in production
+			: "http://localhost:3000",
 		credentials: true,
 	})
 );
@@ -70,10 +73,15 @@ app.use("/api/songs", songRoutes);
 app.use("/api/albums", albumRoutes);
 app.use("/api/stats", statRoutes);
 
+// FIXED: Serve static files in production
 if (process.env.NODE_ENV === "production") {
-	app.use(express.static(path.join(__dirname, "../frontend/dist")));
+	const frontendDistPath = path.join(__dirname, "../frontend/dist");
+	
+	app.use(express.static(frontendDistPath));
+	
+	// Handle React Router - send all non-API requests to index.html
 	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "../frontend", "dist", "index.html"));
+		res.sendFile(path.join(frontendDistPath, "index.html"));
 	});
 }
 

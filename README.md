@@ -345,8 +345,8 @@ This project is licensed under the ISC License.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@YOUR_GITHUB_USERNAME](https://github.com/asifahemmed09)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/asif-ahemmed-2a8760393/)
+- GitHub: [@asifahemmed09](https://github.com/asifahemmed09)
+- LinkedIn: [asifahemmed](https://www.linkedin.com/in/asif-ahemmed-2a8760393/)
 - Email: asifahemmed.dev@gmail.com
 
 ---

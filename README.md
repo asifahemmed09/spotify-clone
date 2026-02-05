@@ -15,17 +15,6 @@ A feature-rich, full-stack music streaming application built with the MERN stack
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-  <img src="screenshots/home.png" alt="Home Page" width="45%"/>
-  <img src="screenshots/player.png" alt="Music Player" width="45%"/>
-  <img src="screenshots/chat.png" alt="Chat Feature" width="45%"/>
-  <img src="screenshots/admin.png" alt="Admin Dashboard" width="45%"/>
-</div>
-
----
-
 ## ✨ Features
 
 ### 🎵 **Music Streaming**
